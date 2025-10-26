@@ -64,3 +64,51 @@ Checking which port is used by NFS and allowing access by updating inbound rules
 ![Images](checking_ports.png)
 Updating Inbound rules
 ![Images](allowing%20inbound%20rules.png)
+### Step 6. Configure Database Server
+Installing MYSQL Server on DBserver and creating tooling database, user and credentials
+![Images](Creating%20user%20on%20DB.png)
+
+### Step 7. Preparing Web Server
+Launching an EC2 Instance with RHEL 9  OS 
+![Images](web-server-instance.png)
+Install NFS client
+```sh
+   sudo yum install nfs-utils nfs4-acl-tools -y
+```
+Mount /var/www and target the NFS server export for app
+```sh
+    sudo mkdir /var/www
+    sudo mount -t nfs -o rw,nosuid <NFS-Server-IP>:/mnt/apps /var/www
+```
+![Images](preparing%20web%20server%201.png)
+
+Install Remi's repository, Apache and PHP
+```sh
+    sudo yum install httpd -y
+    sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    sudo dnf install dnf-utils http://rpmd.remirepo.net/enterprise/remi-release-8.rpm
+    sudo dnf module reset pho
+    sudo dnf module enable php:remi-7.4
+    sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
+    sudo systemctl start php-fpm
+    sudo systemctl enable php-fpm
+```
+![Images](confirming%20apache%20files.png)
+
+The same steps to be done for server 2 and server 3
+### Step 8. Fork the tooling source code from StegHUb Github Account
+Navigate to Steghubb repo using the link
+https://github.com/StegTechHub/tooling
+
+Click on Fork to fork the repo
+![Images](Forking%20Repo.png)
+cloning the repo
+![Images](git%20cloning%20.png)
+
+### Step 9. Accesiing the Website 
+on the webserver instance get the public ip and on the browser open the link
+```sh
+   http://Web-server-Public-ip/index.php
+```
+![Images](steghub%20login%20page.png)
+
