@@ -6,18 +6,20 @@ AS a DevOps engineer there are tools that must have.In this project we are going
 - Grafana
 ### Prerequisite
 
-Infarastructure: AWS
-Webserver Linux: RedHat Enterprise linux 9
-Database Server: ubuntu 24.04  + MySql
-Storage Server: RedHat Linux Enterpriser 9
-Programing Language: PHP
-Code Repository: Github
+- Infarastructure: AWS
+- Webserver Linux: RedHat Enterprise linux 9
+- Database Server: ubuntu 24.04  + MySql
+- Storage Server: RedHat Linux Enterpriser 9
+- Programing Language: PHP
+- Code Repository: Github
 
 ### Step 1. Setting up NFS Server
 Navigate to AWS dashboard and choose a new EC2 Instance
 choosing RHEL Linux 9 OS.
 Launch the instance and when ready ssh into it.
 ![Images](NFS-Server.png)
+sshing into the server
+![Images](SSH%20into%20ec2-Instance.png)
 ### Step 2. Configuring LVM on the server
 create 3 volumes of 10Gb each and attach to ec2 instance.
 ![Images](NFS%20instance%20attaching%20Volumes.png)
