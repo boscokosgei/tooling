@@ -119,4 +119,4 @@ Configure Jenkins Server
 Update the webhook with updated IP address.
 
 Update Publish over ssh build on jenkins job
-
+Update ec2-user Permissions
