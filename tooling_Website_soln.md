@@ -116,4 +116,5 @@ on the webserver instance get the public ip and on the browser open the link
 
 ## Step 10. Configuring Jenkins server for CI/CD Pipeline
 Configure Jenkins Server
+Update the webhook with updated IP address.
 
