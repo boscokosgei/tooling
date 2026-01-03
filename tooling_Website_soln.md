@@ -114,3 +114,6 @@ on the webserver instance get the public ip and on the browser open the link
 ```
 ![Images](steghub%20login%20page.png)
 
+## Step 10. Configuring Jenkins server for CI/CD Pipeline
+Configure Jenkins Server
+
