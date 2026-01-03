@@ -118,3 +118,5 @@ on the webserver instance get the public ip and on the browser open the link
 Configure Jenkins Server
 Update the webhook with updated IP address.
 
+Update Publish over ssh build on jenkins job
+
